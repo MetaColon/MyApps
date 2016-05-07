@@ -1,0 +1,13 @@
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\bin\Debug\Snakea.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\bin\Debug\Snakea.pdb
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\bin\Debug\Snakea.Snakea.apk
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\bin\Debug\Snakea.Snakea-Signed.apk
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\Snakea.csprojResolveAssemblyReference.cache
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\Snakea.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\Snakea.pdb
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\android\bin\Snakea.Snakea.apk
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\res\layout\main.xml
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\res\values\strings.xml
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\res\drawable\icon.png
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\R.cs.flag
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\uploadflags.txt

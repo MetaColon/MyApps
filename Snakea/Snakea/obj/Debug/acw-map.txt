@@ -1,0 +1,8 @@
+Snakea.MainActivity, Snakea;md564e2fafda40949e11e3500b961f5d2dc.MainActivity
+Snakea.MainActivity, Snakea, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md564e2fafda40949e11e3500b961f5d2dc.MainActivity
+Snakea.MainActivity;md564e2fafda40949e11e3500b961f5d2dc.MainActivity
+snakea.MainActivity;md564e2fafda40949e11e3500b961f5d2dc.MainActivity
+Snakea.GLView1, Snakea;md564e2fafda40949e11e3500b961f5d2dc.GLView1
+Snakea.GLView1, Snakea, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md564e2fafda40949e11e3500b961f5d2dc.GLView1
+Snakea.GLView1;md564e2fafda40949e11e3500b961f5d2dc.GLView1
+snakea.GLView1;md564e2fafda40949e11e3500b961f5d2dc.GLView1

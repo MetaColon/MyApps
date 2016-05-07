@@ -1,0 +1,6 @@
+c:\users\timo\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Debug\Tetris.exe.config
+c:\users\timo\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Debug\Tetris.exe
+c:\users\timo\documents\visual studio 2015\Projects\Tetris\Tetris\bin\Debug\Tetris.pdb
+c:\users\timo\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Debug\Tetris.csprojResolveAssemblyReference.cache
+c:\users\timo\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Debug\Tetris.exe
+c:\users\timo\documents\visual studio 2015\Projects\Tetris\Tetris\obj\Debug\Tetris.pdb

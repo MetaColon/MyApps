@@ -1,0 +1,8 @@
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\obj\Debug\Vire2.csprojResolveAssemblyReference.cache
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\bin\Debug\Minecraft.exe.config
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\bin\Debug\Minecraft.exe
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\bin\Debug\Minecraft.pdb
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\obj\Debug\Minecraft.Properties.Resources.resources
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\obj\Debug\Vire2.csproj.GenerateResource.Cache
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\obj\Debug\Minecraft.exe
+c:\users\timo\documents\visual studio 2015\Projects\Vire2\Vire2\obj\Debug\Minecraft.pdb

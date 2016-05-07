@@ -1,0 +1,6 @@
+c:\users\timo\documents\visual studio 2015\Projects\Fibonacci Clock\Fibonacci Clock\bin\Debug\Fibonacci Clock.exe.config
+c:\users\timo\documents\visual studio 2015\Projects\Fibonacci Clock\Fibonacci Clock\bin\Debug\Fibonacci Clock.exe
+c:\users\timo\documents\visual studio 2015\Projects\Fibonacci Clock\Fibonacci Clock\bin\Debug\Fibonacci Clock.pdb
+c:\users\timo\documents\visual studio 2015\Projects\Fibonacci Clock\Fibonacci Clock\obj\Debug\Fibonacci Clock.csprojResolveAssemblyReference.cache
+c:\users\timo\documents\visual studio 2015\Projects\Fibonacci Clock\Fibonacci Clock\obj\Debug\Fibonacci Clock.exe
+c:\users\timo\documents\visual studio 2015\Projects\Fibonacci Clock\Fibonacci Clock\obj\Debug\Fibonacci Clock.pdb

@@ -1,0 +1,8 @@
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\Snakea.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\Mono.Android.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\mscorlib.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\OpenTK.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\System.Core.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\System.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\System.Xml.dll
+c:\users\timo\documents\visual studio 2015\Projects\Snakea\Snakea\obj\Debug\assemblies\System.Xml.Linq.dll

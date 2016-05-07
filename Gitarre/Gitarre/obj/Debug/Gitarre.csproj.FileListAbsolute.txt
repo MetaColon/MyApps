@@ -1,0 +1,6 @@
+c:\users\timo\documents\visual studio 2015\Projects\Gitarre\Gitarre\bin\Debug\Gitarre.exe.config
+c:\users\timo\documents\visual studio 2015\Projects\Gitarre\Gitarre\bin\Debug\Gitarre.exe
+c:\users\timo\documents\visual studio 2015\Projects\Gitarre\Gitarre\bin\Debug\Gitarre.pdb
+c:\users\timo\documents\visual studio 2015\Projects\Gitarre\Gitarre\obj\Debug\Gitarre.csprojResolveAssemblyReference.cache
+c:\users\timo\documents\visual studio 2015\Projects\Gitarre\Gitarre\obj\Debug\Gitarre.exe
+c:\users\timo\documents\visual studio 2015\Projects\Gitarre\Gitarre\obj\Debug\Gitarre.pdb
