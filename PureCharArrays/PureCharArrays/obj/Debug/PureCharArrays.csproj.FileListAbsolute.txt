@@ -1,0 +1,6 @@
+c:\users\timo\documents\visual studio 2015\Projects\PureCharArrays\PureCharArrays\bin\Debug\PureCharArrays.exe.config
+c:\users\timo\documents\visual studio 2015\Projects\PureCharArrays\PureCharArrays\bin\Debug\PureCharArrays.exe
+c:\users\timo\documents\visual studio 2015\Projects\PureCharArrays\PureCharArrays\bin\Debug\PureCharArrays.pdb
+c:\users\timo\documents\visual studio 2015\Projects\PureCharArrays\PureCharArrays\obj\Debug\PureCharArrays.csprojResolveAssemblyReference.cache
+c:\users\timo\documents\visual studio 2015\Projects\PureCharArrays\PureCharArrays\obj\Debug\PureCharArrays.exe
+c:\users\timo\documents\visual studio 2015\Projects\PureCharArrays\PureCharArrays\obj\Debug\PureCharArrays.pdb
