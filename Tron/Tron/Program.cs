@@ -1,83 +1,73 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Tron
 {
     class Program
     {
-        public static int sizex = Console.LargestWindowWidth - 2, sizey = Console.LargestWindowHeight - 2;
-        public static decimal Time, Timer, Wait = 5;
+        public static int sizex = Console.LargestWindowWidth - 1, sizey = Console.LargestWindowHeight - 1;
+        public static int[,] Feld = new int[sizey, sizex];
+        public static int[,] possis = new int[2, 2] { { sizex - 10, sizey - 10 }, { 10, 10 } };
+        public static decimal Time, Timer, Speed = 5;
+        public static ConsoleColor[] colours = new ConsoleColor[2] { ConsoleColor.Blue, ConsoleColor.Red };
         public static byte[] directions = new byte[2] { 0, 2 };
-        public static byte[,] Feld = new byte[sizey, sizex];
-        public static int[,] pos = new int[2, 2] { {sizex - 10,sizey - 10}, {10,10 } };
-        public static ConsoleColor[] colours = new ConsoleColor[2] {ConsoleColor.Blue,ConsoleColor.Red };
+        public static bool end = false;
         static void Main(string[] args)
         {
             ConsoleKeyInfo cki = new ConsoleKeyInfo();
             ConsoleKey ck = new ConsoleKey();
             char c = new char();
-            bool end = false;
             Init();
             a:
             Time = Environment.TickCount;
-            if(Console.KeyAvailable)
+
+            if (Console.KeyAvailable)
             {
                 while (Console.KeyAvailable) cki = Console.ReadKey(true);
                 ck = cki.Key;
                 c = cki.KeyChar;
-                #region Inputverarbeitung
+                #region verarbeite
                 switch (ck)
                 {
+                    case ConsoleKey.A:
+                        if (directions[1] != 1)
+                            directions[1] = 3;
+                        break;
+                    case ConsoleKey.Add:
+                        break;
+                    case ConsoleKey.Applications:
+                        break;
+                    case ConsoleKey.Attention:
+                        break;
+                    case ConsoleKey.B:
+                        break;
                     case ConsoleKey.Backspace:
                         break;
-                    case ConsoleKey.Tab:
+                    case ConsoleKey.BrowserBack:
+                        break;
+                    case ConsoleKey.BrowserFavorites:
+                        break;
+                    case ConsoleKey.BrowserForward:
+                        break;
+                    case ConsoleKey.BrowserHome:
+                        break;
+                    case ConsoleKey.BrowserRefresh:
+                        break;
+                    case ConsoleKey.BrowserSearch:
+                        break;
+                    case ConsoleKey.BrowserStop:
+                        break;
+                    case ConsoleKey.C:
                         break;
                     case ConsoleKey.Clear:
                         break;
-                    case ConsoleKey.Enter:
+                    case ConsoleKey.CrSel:
                         break;
-                    case ConsoleKey.Pause:
-                        break;
-                    case ConsoleKey.Escape:
-                        break;
-                    case ConsoleKey.Spacebar:
-                        break;
-                    case ConsoleKey.PageUp:
-                        break;
-                    case ConsoleKey.PageDown:
-                        break;
-                    case ConsoleKey.End:
-                        break;
-                    case ConsoleKey.Home:
-                        break;
-                    case ConsoleKey.LeftArrow:
-                        directions[0] = 3;
-                        break;
-                    case ConsoleKey.UpArrow:
-                        directions[0] = 0;
-                        break;
-                    case ConsoleKey.RightArrow:
-                        directions[0] = 1;
-                        break;
-                    case ConsoleKey.DownArrow:
-                        directions[0] = 2;
-                        break;
-                    case ConsoleKey.Select:
-                        break;
-                    case ConsoleKey.Print:
-                        break;
-                    case ConsoleKey.Execute:
-                        break;
-                    case ConsoleKey.PrintScreen:
-                        break;
-                    case ConsoleKey.Insert:
-                        break;
-                    case ConsoleKey.Delete:
-                        break;
-                    case ConsoleKey.Help:
+                    case ConsoleKey.D:
+                        if (directions[1] != 3)
+                            directions[1] = 1;
                         break;
                     case ConsoleKey.D0:
                         break;
@@ -99,119 +89,33 @@ namespace Tron
                         break;
                     case ConsoleKey.D9:
                         break;
-                    case ConsoleKey.A:
-                        directions[1] = 3;
-                        break;
-                    case ConsoleKey.B:
-                        break;
-                    case ConsoleKey.C:
-                        break;
-                    case ConsoleKey.D:
-                        directions[1] = 1;
-                        break;
-                    case ConsoleKey.E:
-                        break;
-                    case ConsoleKey.F:
-                        break;
-                    case ConsoleKey.G:
-                        break;
-                    case ConsoleKey.H:
-                        break;
-                    case ConsoleKey.I:
-                        break;
-                    case ConsoleKey.J:
-                        break;
-                    case ConsoleKey.K:
-                        break;
-                    case ConsoleKey.L:
-                        break;
-                    case ConsoleKey.M:
-                        break;
-                    case ConsoleKey.N:
-                        break;
-                    case ConsoleKey.O:
-                        break;
-                    case ConsoleKey.P:
-                        break;
-                    case ConsoleKey.Q:
-                        break;
-                    case ConsoleKey.R:
-                        break;
-                    case ConsoleKey.S:
-                        directions[1] = 2;
-                        break;
-                    case ConsoleKey.T:
-                        break;
-                    case ConsoleKey.U:
-                        break;
-                    case ConsoleKey.V:
-                        break;
-                    case ConsoleKey.W:
-                        directions[1] = 0;
-                        break;
-                    case ConsoleKey.X:
-                        break;
-                    case ConsoleKey.Y:
-                        break;
-                    case ConsoleKey.Z:
-                        break;
-                    case ConsoleKey.LeftWindows:
-                        break;
-                    case ConsoleKey.RightWindows:
-                        break;
-                    case ConsoleKey.Applications:
-                        break;
-                    case ConsoleKey.Sleep:
-                        break;
-                    case ConsoleKey.NumPad0:
-                        break;
-                    case ConsoleKey.NumPad1:
-                        break;
-                    case ConsoleKey.NumPad2:
-                        break;
-                    case ConsoleKey.NumPad3:
-                        break;
-                    case ConsoleKey.NumPad4:
-                        break;
-                    case ConsoleKey.NumPad5:
-                        break;
-                    case ConsoleKey.NumPad6:
-                        break;
-                    case ConsoleKey.NumPad7:
-                        break;
-                    case ConsoleKey.NumPad8:
-                        break;
-                    case ConsoleKey.NumPad9:
-                        break;
-                    case ConsoleKey.Multiply:
-                        break;
-                    case ConsoleKey.Add:
-                        break;
-                    case ConsoleKey.Separator:
-                        break;
-                    case ConsoleKey.Subtract:
-                        break;
                     case ConsoleKey.Decimal:
+                        break;
+                    case ConsoleKey.Delete:
                         break;
                     case ConsoleKey.Divide:
                         break;
+                    case ConsoleKey.DownArrow:
+                        if (directions[0] != 0)
+                            directions[0] = 2;
+                        break;
+                    case ConsoleKey.E:
+                        break;
+                    case ConsoleKey.End:
+                        break;
+                    case ConsoleKey.Enter:
+                        break;
+                    case ConsoleKey.EraseEndOfFile:
+                        break;
+                    case ConsoleKey.Escape:
+                        break;
+                    case ConsoleKey.ExSel:
+                        break;
+                    case ConsoleKey.Execute:
+                        break;
+                    case ConsoleKey.F:
+                        break;
                     case ConsoleKey.F1:
-                        break;
-                    case ConsoleKey.F2:
-                        break;
-                    case ConsoleKey.F3:
-                        break;
-                    case ConsoleKey.F4:
-                        break;
-                    case ConsoleKey.F5:
-                        break;
-                    case ConsoleKey.F6:
-                        break;
-                    case ConsoleKey.F7:
-                        break;
-                    case ConsoleKey.F8:
-                        break;
-                    case ConsoleKey.F9:
                         break;
                     case ConsoleKey.F10:
                         break;
@@ -233,6 +137,8 @@ namespace Tron
                         break;
                     case ConsoleKey.F19:
                         break;
+                    case ConsoleKey.F2:
+                        break;
                     case ConsoleKey.F20:
                         break;
                     case ConsoleKey.F21:
@@ -243,51 +149,93 @@ namespace Tron
                         break;
                     case ConsoleKey.F24:
                         break;
-                    case ConsoleKey.BrowserBack:
+                    case ConsoleKey.F3:
                         break;
-                    case ConsoleKey.BrowserForward:
+                    case ConsoleKey.F4:
                         break;
-                    case ConsoleKey.BrowserRefresh:
+                    case ConsoleKey.F5:
                         break;
-                    case ConsoleKey.BrowserStop:
+                    case ConsoleKey.F6:
                         break;
-                    case ConsoleKey.BrowserSearch:
+                    case ConsoleKey.F7:
                         break;
-                    case ConsoleKey.BrowserFavorites:
+                    case ConsoleKey.F8:
                         break;
-                    case ConsoleKey.BrowserHome:
+                    case ConsoleKey.F9:
                         break;
-                    case ConsoleKey.VolumeMute:
+                    case ConsoleKey.G:
                         break;
-                    case ConsoleKey.VolumeDown:
+                    case ConsoleKey.H:
                         break;
-                    case ConsoleKey.VolumeUp:
+                    case ConsoleKey.Help:
                         break;
-                    case ConsoleKey.MediaNext:
+                    case ConsoleKey.Home:
                         break;
-                    case ConsoleKey.MediaPrevious:
+                    case ConsoleKey.I:
                         break;
-                    case ConsoleKey.MediaStop:
+                    case ConsoleKey.Insert:
                         break;
-                    case ConsoleKey.MediaPlay:
+                    case ConsoleKey.J:
                         break;
-                    case ConsoleKey.LaunchMail:
+                    case ConsoleKey.K:
                         break;
-                    case ConsoleKey.LaunchMediaSelect:
+                    case ConsoleKey.L:
                         break;
                     case ConsoleKey.LaunchApp1:
                         break;
                     case ConsoleKey.LaunchApp2:
                         break;
+                    case ConsoleKey.LaunchMail:
+                        break;
+                    case ConsoleKey.LaunchMediaSelect:
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        if (directions[0] != 1)
+                            directions[0] = 3;
+                        break;
+                    case ConsoleKey.LeftWindows:
+                        break;
+                    case ConsoleKey.M:
+                        break;
+                    case ConsoleKey.MediaNext:
+                        break;
+                    case ConsoleKey.MediaPlay:
+                        break;
+                    case ConsoleKey.MediaPrevious:
+                        break;
+                    case ConsoleKey.MediaStop:
+                        break;
+                    case ConsoleKey.Multiply:
+                        break;
+                    case ConsoleKey.N:
+                        break;
+                    case ConsoleKey.NoName:
+                        break;
+                    case ConsoleKey.NumPad0:
+                        break;
+                    case ConsoleKey.NumPad1:
+                        break;
+                    case ConsoleKey.NumPad2:
+                        break;
+                    case ConsoleKey.NumPad3:
+                        break;
+                    case ConsoleKey.NumPad4:
+                        break;
+                    case ConsoleKey.NumPad5:
+                        break;
+                    case ConsoleKey.NumPad6:
+                        break;
+                    case ConsoleKey.NumPad7:
+                        break;
+                    case ConsoleKey.NumPad8:
+                        break;
+                    case ConsoleKey.NumPad9:
+                        break;
+                    case ConsoleKey.O:
+                        break;
                     case ConsoleKey.Oem1:
                         break;
-                    case ConsoleKey.OemPlus:
-                        break;
-                    case ConsoleKey.OemComma:
-                        break;
-                    case ConsoleKey.OemMinus:
-                        break;
-                    case ConsoleKey.OemPeriod:
+                    case ConsoleKey.Oem102:
                         break;
                     case ConsoleKey.Oem2:
                         break;
@@ -303,44 +251,141 @@ namespace Tron
                         break;
                     case ConsoleKey.Oem8:
                         break;
-                    case ConsoleKey.Oem102:
+                    case ConsoleKey.OemClear:
                         break;
-                    case ConsoleKey.Process:
+                    case ConsoleKey.OemComma:
                         break;
-                    case ConsoleKey.Packet:
+                    case ConsoleKey.OemMinus:
                         break;
-                    case ConsoleKey.Attention:
+                    case ConsoleKey.OemPeriod:
                         break;
-                    case ConsoleKey.CrSel:
+                    case ConsoleKey.OemPlus:
                         break;
-                    case ConsoleKey.ExSel:
-                        break;
-                    case ConsoleKey.EraseEndOfFile:
-                        break;
-                    case ConsoleKey.Play:
-                        break;
-                    case ConsoleKey.Zoom:
-                        break;
-                    case ConsoleKey.NoName:
+                    case ConsoleKey.P:
                         break;
                     case ConsoleKey.Pa1:
                         break;
-                    case ConsoleKey.OemClear:
+                    case ConsoleKey.Packet:
+                        break;
+                    case ConsoleKey.PageDown:
+                        break;
+                    case ConsoleKey.PageUp:
+                        break;
+                    case ConsoleKey.Pause:
+                        break;
+                    case ConsoleKey.Play:
+                        break;
+                    case ConsoleKey.Print:
+                        break;
+                    case ConsoleKey.PrintScreen:
+                        break;
+                    case ConsoleKey.Process:
+                        break;
+                    case ConsoleKey.Q:
+                        break;
+                    case ConsoleKey.R:
+                        break;
+                    case ConsoleKey.RightArrow:
+                        if (directions[0] != 3)
+                            directions[0] = 1;
+                        break;
+                    case ConsoleKey.RightWindows:
+                        break;
+                    case ConsoleKey.S:
+                        if (directions[1] != 0)
+                            directions[1] = 2;
+                        break;
+                    case ConsoleKey.Select:
+                        break;
+                    case ConsoleKey.Separator:
+                        break;
+                    case ConsoleKey.Sleep:
+                        break;
+                    case ConsoleKey.Spacebar:
+                        break;
+                    case ConsoleKey.Subtract:
+                        break;
+                    case ConsoleKey.T:
+                        break;
+                    case ConsoleKey.Tab:
+                        break;
+                    case ConsoleKey.U:
+                        break;
+                    case ConsoleKey.UpArrow:
+                        if (directions[0] != 2)
+                            directions[0] = 0;
+                        break;
+                    case ConsoleKey.V:
+                        break;
+                    case ConsoleKey.VolumeDown:
+                        break;
+                    case ConsoleKey.VolumeMute:
+                        break;
+                    case ConsoleKey.VolumeUp:
+                        break;
+                    case ConsoleKey.W:
+                        if (directions[1] != 2)
+                            directions[1] = 0;
+                        break;
+                    case ConsoleKey.X:
+                        break;
+                    case ConsoleKey.Y:
+                        break;
+                    case ConsoleKey.Z:
+                        break;
+                    case ConsoleKey.Zoom:
                         break;
                     default:
                         break;
                 }
                 #endregion
             }
-            if(Time -Timer > Wait)
+
+            if (Time - Timer > Speed)
+                if (CallOnTick())
+                    end = false;
+                else end = true;
+            if (!end) goto a;
+            else
+                Console.ReadLine();
+        }
+
+        public static bool CallOnTick()
+        {
+            Timer = Time;
+            if (directions[0] == 0) possis[0, 1]--;
+            else if (directions[0] == 1) possis[0, 0]++;
+            else if (directions[0] == 2) possis[0, 1]++;
+            else if (directions[0] == 3) possis[0, 0]--;
+            if (directions[1] == 0) possis[1, 1]--;
+            else if (directions[1] == 1) possis[1, 0]++;
+            else if (directions[1] == 2) possis[1, 1]++;
+            else if (directions[1] == 3) possis[1, 0]--;
+            try
             {
-                Timer = Time;
-                end = !callonTick();
-                Wait = Convert.ToInt32(0.99 * (double)Wait);
+                if (Feld[possis[0, 1], possis[0, 0]] == 0)
+                {
+                    Feld[possis[0, 1], possis[0, 0]] = 1;
+                    Console.SetCursorPosition(possis[0, 0], possis[0, 1]);
+                    Console.ForegroundColor = colours[0];
+                    Console.Write("█");
+                }
+                else return false;
+                if (Feld[possis[1, 1], possis[1, 0]] == 0)
+                {
+                    Feld[possis[1, 1], possis[1, 0]] = 2;
+                    Console.SetCursorPosition(possis[1, 0], possis[1, 1]);
+                    Console.ForegroundColor = colours[1];
+                    Console.Write("█");
+                }
+                else return false;
             }
-            if (!end)
-                goto a;
-            else Console.ReadLine();
+            catch
+            {
+                return false;
+            }
+            //zeichne();
+            return true;
         }
 
         public static void zeichne()
@@ -351,85 +396,19 @@ namespace Tron
                 {
                     if (Feld[y, x] > 0)
                     {
-                        Console.SetCursorPosition(x, y);
-                        Console.ForegroundColor = colours[Feld[y, x] - 1];
-                        Console.Write("█");
                     }
                 }
             }
         }
 
-        public static bool callonTick()
-        {
-            switch (directions[0])
-            {
-                case 0:
-                    if (pos[0, 1] > 0)
-                        pos[0, 1]--;
-                    break;
-                case 1:
-                    if (pos[0, 0] < sizex - 1)
-                        pos[0, 0]++;
-                    break;
-                case 2:
-                    if (pos[0, 1] < sizey - 1)
-                        pos[0, 1]++;
-                    break;
-                case 3:
-                    if (pos[0, 0] > 0)
-                        pos[0, 0]--;
-                    break;
-                default:
-                    break;
-            }
-            switch (directions[1])
-            {
-                case 0:
-                    if (pos[1, 1] > 0)
-                        pos[1, 1]--;
-                    break;
-                case 1:
-                    if (pos[1, 0] < sizex - 1)
-                        pos[1, 0]++;
-                    break;
-                case 2:
-                    if (pos[1, 1] < sizey - 1)
-                        pos[1, 1]++;
-                    break;
-                case 3:
-                    if (pos[1, 0] > 0)
-                        pos[1, 0]--;
-                    break;
-                default:
-                    break;
-            }
-            if (Feld[pos[0, 1], pos[0, 0]] == 0)
-            {
-                Feld[pos[0, 1], pos[0, 0]] = 1;
-                Console.SetCursorPosition(pos[0, 0], pos[0, 1]);
-                Console.ForegroundColor = colours[0];
-                Console.Write("█");
-            }
-            else return false;
-            if (Feld[pos[1, 1], pos[1, 0]] == 0)
-            {
-                Feld[pos[1, 1], pos[1, 0]] = 2;
-                Console.SetCursorPosition(pos[1, 0], pos[1, 1]);
-                Console.ForegroundColor = colours[1];
-                Console.Write("█");
-            }
-            else return false;
-            return true;
-        }
-
         public static void Init()
         {
-            zeichne();
-            Console.SetWindowSize(sizex, sizey+1);
-            Console.SetBufferSize(sizex, sizey+1);
+            Console.SetBufferSize(sizex, sizey);
+            Console.SetWindowSize(sizex, sizey);
             Console.CursorVisible = false;
-            Feld[pos[0, 1], pos[0, 0]] = 1;
-            Feld[pos[1, 1], pos[1, 0]] = 2;
+            Feld[possis[0, 1], possis[0, 0]] = 1;
+            Feld[possis[1, 1], possis[1, 0]] = 2;
+            zeichne();
         }
     }
 }
